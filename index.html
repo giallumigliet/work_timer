@@ -131,14 +131,14 @@
   <ul id="times-list"></ul>
 
   <div id="progress-container">
-    <svg width="180" height="180">
-      <circle id="progress-bg" cx="75" cy="75" r="80" stroke-width="15" fill="none" />
+    <svg width="150" height="150">
+      <circle id="progress-bg" cx="75" cy="75" r="70" stroke-width="10" fill="none" />
       <circle
         id="progress-bar"
         cx="75"
         cy="75"
-        r="80"
-        stroke-width="13"
+        r="70"
+        stroke-width="10"
         fill="none"
         stroke-dasharray="440"
         stroke-dashoffset="440"
@@ -298,7 +298,7 @@
           hour12: false
         });
         
-        progressBar.style.stroke = "#00bfff"; 
+        progressBar.style.stroke = "#738bfc"; 
         timeInfo.textContent = `Exit time: \n${exitTimeFormatted}`;
       } else {
         progressBar.style.stroke = "#ff4444"; 
@@ -315,7 +315,7 @@
         const { workHours, remaining } = calculateWorkTime();
         if (workHours > 0) {
           if (remaining > 0) {
-            liveTimer.style.color = "#4da6ff";
+            liveTimer.style.color = "#738bfc";
             liveTimer.textContent = `Worked: ${formatHours(workHours)}`;
           } else {
             liveTimer.style.color = "#ff4444"; 
