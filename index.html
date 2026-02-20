@@ -95,7 +95,7 @@
     }
     #time-info {
       position: absolute;
-      top: 35px;
+      top: 90px;
       left: 0;
       right: 0;
       font-size: 18px;
@@ -123,25 +123,25 @@
 <body>
   <h1>WORK TIMER</h1>
   <div id="button-footer">
+    <button id="reset-btn">RESET</button>
     <button id="record-btn">REGISTER TIME</button>
     <button id="undo-btn">↺</button>
-    <button id="reset-btn">RESET DAY</button>
   </div>
 
   <ul id="times-list"></ul>
 
   <div id="progress-container">
-    <svg width="150" height="150">
-      <circle id="progress-bg" cx="75" cy="75" r="70" stroke-width="10" fill="none" />
+    <svg width="240" height="240">
+      <circle id="progress-bg" cx="120" cy="120" r="100" stroke-width="16" fill="none" />
       <circle
         id="progress-bar"
-        cx="75"
-        cy="75"
-        r="70"
+        cx="120"
+        cy="120"
+        r="100"
         stroke-width="10"
         fill="none"
-        stroke-dasharray="440"
-        stroke-dashoffset="440"
+        stroke-dasharray="628 628"
+        stroke-dashoffset="628"
       />
     </svg>
     <p id="time-info">PRESS the button to register the time</p>
@@ -243,7 +243,7 @@
     function calculateWorkTime() {
       if (times.length < 1) {
         timeInfo.textContent = "PRESS the button to register the time";
-        progressBar.style.strokeDashoffset = 440;
+        progressBar.style.strokeDashoffset = 628;
         return { workHours: 0, remaining: 8 };
       }
 
@@ -280,7 +280,7 @@
       const remaining = fullDay - workHours ;
       
       const percent = Math.min(100, (workHours / fullDay) * 100);
-      progressBar.style.strokeDashoffset = 440 - (440 * percent) / 100;
+      progressBar.style.strokeDashoffset = 628 - (628 * percent) / 100;
 
       if (remaining > 0) {
         let exitTime;
