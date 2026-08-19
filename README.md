@@ -1,5 +1,7 @@
 # 🕒 Work Timer Web App
-
+<p align="center">
+  <img width="150" height="150" alt="check_calendar" src="work_timer.png" />
+</p>
 A simple **web app to track your working hours**, built entirely with **HTML, CSS, and vanilla JavaScript** — no frameworks or dependencies required.  
 It allows you to log your start time, lunch break, and finish time, while showing your daily progress toward 8 hours of work (and overtime if exceeded).
 
